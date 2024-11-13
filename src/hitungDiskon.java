@@ -41,7 +41,7 @@ public class hitungDiskon extends javax.swing.JFrame {
         radioComboBox.addActionListener(e -> {
             comboDiskon.setEnabled(true);
             sliderDiskon.setEnabled(false);
-            radioSlider.setSelected(false); // Membatalkan pilihan radioSlider
+            radioSlider.setSelected(false);
         });
 
         radioSlider.addActionListener(e -> {
@@ -234,11 +234,9 @@ public class hitungDiskon extends javax.swing.JFrame {
             double diskon;
 
             if (radioComboBox.isSelected()) {
-                // Ambil nilai dari ComboBox
                 String selectedDiskon = (String) comboDiskon.getSelectedItem();
                 diskon = Double.parseDouble(selectedDiskon.replace("%", "")) / 100;
             } else {
-                // Ambil nilai dari Slider
                 diskon = sliderDiskon.getValue() / 100.0;
             }
 
